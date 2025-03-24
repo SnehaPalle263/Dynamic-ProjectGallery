@@ -7,10 +7,18 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .task-list-container {
+            width: 30%;
         }
         .task-list {
             list-style-type: none;
             padding: 0;
+            max-height: 80vh;
+            overflow-y: auto;
         }
         .task-list li {
             padding: 10px;
@@ -24,39 +32,43 @@
             background: #d9d9d9;
         }
         #output {
-            margin-top: 20px;
-            font-weight: bold;
-            color: blue;
-            padding: 10px;
+            width: 65%;
+            margin-left: 20px;
+            padding: 20px;
             background-color: #f9f9f9;
             border-radius: 5px;
             min-height: 200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
 
-    <h2>Project Tasks</h2>
-    <ul class="task-list" id="taskList">  <!-- Added id="taskList" -->
-        <li onclick='showTask("task-1")'>Task 1</li>
-        <li onclick='showTask("task-2")'>Task 2</li>
-        <li onclick='showTask("task-3")'>Task 3</li>
-        <li onclick='showTask("task-4")'>Task 4</li>
-        <li onclick='showTask("task-5")'>Task 5</li>
-        <li onclick='showTask("task-6")'>Task 6</li>
-        <li onclick='showTask("task-7")'>Task 7</li>
-        <li onclick='showTask("task-8")'>Task 8</li>
-        <li onclick='showTask("task-9")'>Task 9</li>
-        <li onclick='showTask("task-10")'>Task 10</li>
-        <li onclick='showTask("task-11")'>Task 11</li>
-        <li onclick='showTask("task-12")'>Task 12</li>
-        <li onclick='showTask("task-13")'>Task 13</li>
-        <li onclick='showTask("task-14")'>Task 14</li>
-        <li onclick='showTask("task-15")'>Task 15</li>
-        <li onclick='showTask("task-16")'>Task 16</li>
-    </ul>
+    <div class="task-list-container">
+        <h2>Project Tasks</h2>
+        <ul class="task-list">
+            <li onclick='showTask("task-1")'>Task 1</li>
+            <li onclick='showTask("task-2")'>Task 2</li>
+            <li onclick='showTask("task-3")'>Task 3</li>
+            <li onclick='showTask("task-4")'>Task 4</li>
+            <li onclick='showTask("task-5")'>Task 5</li>
+            <li onclick='showTask("task-6")'>Task 6</li>
+            <li onclick='showTask("task-7")'>Task 7</li>
+            <li onclick='showTask("task-8")'>Task 8</li>
+            <li onclick='showTask("task-9")'>Task 9</li>
+            <li onclick='showTask("task-10")'>Task 10</li>
+            <li onclick='showTask("task-11")'>Task 11</li>
+            <li onclick='showTask("task-12")'>Task 12</li>
+            <li onclick='showTask("task-13")'>Task 13</li>
+            <li onclick='showTask("task-14")'>Task 14</li>
+            <li onclick='showTask("task-15")'>Task 15</li>
+            <li onclick='showTask("task-16")'>Task 16</li>
+        </ul>
+    </div>
 
-    <div id="output">Click on a task to see its content.</div>
+    <div id="output">
+        Click on a task to see its content.
+    </div>
 
     <script>
         // Define the relative URLs (served by local server)
